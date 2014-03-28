@@ -1,0 +1,706 @@
+﻿body {
+    background-color: #F2F2F2;
+    font-size: 12px;
+    font-family: Verdana, Arial;
+    margin-top: 0px;
+    padding: 0;
+    color: #333333;
+}
+
+/* ----- DIVS ------------------------------------- */
+div.page
+{
+    background-color: #FFFFFF;
+    width: 980px;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;    
+    border: 1px solid #DDDDDD;
+}
+
+div.pageheader
+{
+    width: 980px;
+    height: 60px;
+    vertical-align: middle;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background: #315581;
+}
+
+div.pagefooter
+{
+    border-top: 1px solid #555555;
+    width: 980px;
+    height: 30px;
+    vertical-align: middle;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background: #315581;
+}
+
+div.pagemenubar
+{
+    width: 980px;
+    height: 38px;
+    background-image: url('../Images/menubar.png');
+    vertical-align: middle;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.pagelogininfo
+{
+    width: 980px;
+    height: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    vertical-align: middle;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background: #FFFFFF;
+    font-family: Verdana, Arial;
+    font-size: 10px;
+    color: #315581;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+div.errormessage
+{
+    width: 980px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 12px;
+    color: #CC0000;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.textblock
+{
+    width: 920px;
+    vertical-align: top;
+    text-align: left;
+    font-size: 14px;
+    color: #333333;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.formfootnote
+{
+    width: 920px;
+    vertical-align: top;
+    text-align: center;
+    font-size: 10px;
+    color: #333333;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#imagepopup 
+{
+  display: none;
+  position: absolute;
+  color: #333333;
+  font-size: 10px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+div#videopopup 
+{
+  display: none;
+  position: absolute;
+  color: #333333;
+  font-size: 10px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+div.schedule
+{
+    width: 110px;
+    padding: 3px;
+    font-size: 10px;
+    color: #FFFFFF;
+    background: #315581;
+    margin-bottom: 3px;
+}
+
+/* ----- TABLES ------------------------------------- */
+
+table.menutable
+{
+    width: 980px;
+    height: 38px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td.menucell
+{
+    vertical-align: middle; 
+    text-align: center;
+    height: 23px;
+}
+
+/* ----- CONTROLS -------------------------------------- */
+
+input[type="text"], 
+input[type="password"] {
+    border: 1px solid #CCCCCC;
+    padding: 2px;
+    font-size: 12px;
+    color: #333333;
+}
+
+input[type="submit"] {
+    font-size: 12px;
+    padding: 2px;
+}
+
+select {
+    border: 1px solid #CCCCCC;
+    padding: 2px;
+    font-size: 12px;
+    color: #333333;
+}
+
+img.preview 
+{
+    margin-top: 5px;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+img.slideshowpreview 
+{
+    max-width: 320px;
+    max-height: 320px;
+}
+
+img.interactivebuttonpreview 
+{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+img.imagepopuppreview
+{
+    max-width:320px;
+    max-height:320px;
+    border: 1px #333333 solid;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+video.videopopuppreview
+{
+    max-width:420px;
+    max-height:240px;
+    border: 1px #333333 solid;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+input.search
+{
+    font-size: 10px;
+}
+
+input.numericonly
+{
+    border: 1px solid #CCCCCC;
+    padding: 2px;
+    font-size: 12px;
+    color: #333333;
+}
+
+/* ----- FORMS ------------------------------------- */
+
+table.formtable
+{
+    border: 1px solid #CCCCCC;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td.formheader
+{
+    padding: 3px 3px 3px 3px;
+    font-size: 14px;
+    font-weight: bold;
+    height:25px;
+    background-color: #315581;
+    vertical-align: middle;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+td.formprimary
+{
+    padding: 3px 3px 3px 3px;
+    background-color: #FFFFFF;
+    vertical-align: middle;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+td.formsecondary
+{
+    padding: 3px 3px 3px 3px;
+    background-color: #EEEEEE;
+    vertical-align: middle;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+td.formfooter
+{
+    padding: 3px 3px 3px 3px;
+    height:25px;
+    background-color: #315581;
+    vertical-align: middle;
+    text-align: center;
+}
+
+/* ----- SEARCH FORMS ------------------------------------- */
+
+table.searchtable
+{
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td.searchcell
+{
+    font-size: 10px;
+    padding: 1px 1px 1px 1px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+/* ----- GRID --------------------------------------------*/
+
+table.gridtable
+{
+    border: 1px solid #CCCCCC;
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tr.gridrow:nth-child(odd)
+{
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+tr.gridrow:nth-child(even)
+{
+    background-color: #EEEEEE;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+td.gridheader
+{
+    padding: 3px 3px 3px 3px;
+    font-size: 12px;
+    font-weight: bold;
+    height:20px;
+    background-color: #315581;
+    vertical-align: middle;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+td.gridprimary
+{
+    padding: 3px 3px 3px 3px;
+    background-color: #FFFFFF;
+    vertical-align: middle;
+    text-align: left;
+}
+
+td.gridsecondary
+{
+    padding: 3px 3px 3px 3px;
+    background-color: #EEEEEE;
+    vertical-align: middle;
+    text-align: left;
+}
+
+td.gridfooter
+{
+    padding: 3px 3px 3px 3px;
+    height:25px;
+    background-color: #315581;
+    vertical-align: middle;
+    text-align: center;
+}
+
+td.gridtext
+{
+    padding: 3px 3px 3px 3px;
+}
+
+img.gridpreview 
+{
+    max-width: 50px;
+    max-height: 50px;
+    border: 1px solid #333333;
+}
+
+img.gridpreviewnoborder
+{
+    max-width: 40px;
+    max-height: 40px;
+}
+
+table.gridfootertable
+{
+    width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#divfooter a 
+{ 
+    font-size: 12px;
+    color: #FFFFFF;
+    text-decoration: underline; 
+}
+
+#addlink a
+{
+    font-size: 11px;
+    color: #333333;
+    text-decoration: underline; 
+    padding-left: 10px;
+    float: right;
+}
+
+#gridlink a
+{
+    font-size: 11px;
+    color: #333333;
+    text-decoration: underline; 
+}
+
+#gridlinkdelete a
+{
+    font-size: 11px;
+    color: #333333;
+    text-decoration: underline; 
+}
+
+#reportlink a
+{
+    font-size: 11px;
+    color: #333333;
+    margin-left: 50px;
+    text-decoration: underline; 
+    font-weight: bold;
+}
+
+#returnlink a
+{
+    font-size: 12px;
+    color: #FFFFFF;
+    text-decoration: underline; 
+    padding-left: 15px;
+}
+
+#menulink a
+{
+    font-size: 12px;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#schedulelink a
+{
+    font-size: 10px;
+    color: #FFFFFF;
+    font-weight: normal;
+    text-decoration: underline;    
+}
+
+#freelink a
+{
+    font-size: 10px;
+    color: #333333;
+    font-weight: normal;
+    text-decoration: underline;    
+}
+
+#adminlinklogoff a
+{
+    font-size: 10px;
+    color: #333333;
+    font-weight: normal;
+    text-decoration: underline;
+    margin-left: 120px;   
+}
+
+#adminlinkaccounts a
+{
+    font-size: 10px;
+    color: #333333;
+    font-weight: normal;
+    text-decoration: underline;
+    margin-left: 7px;   
+}
+
+#adminlinkusers a
+{
+    font-size: 10px;
+    color: #333333;
+    font-weight: normal;
+    text-decoration: underline;
+    margin-left: 7px;   
+}
+
+#adminlinkmessages a
+{
+    font-size: 10px;
+    color: #333333;
+    font-weight: normal;
+    text-decoration: underline;
+    margin-left: 7px;   
+}
+
+#clearlink a
+{
+    font-size: 10px;
+    color: #FFFFFF;
+    font-weight: normal;
+    text-decoration: underline; 
+    margin-right: 15px;
+}
+
+.previousnext
+{
+    font-size: 12px;
+    color: #FFFFFF;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* ----- SURVEY DESIGN ------------------------------------- */
+
+table.surveytable
+{
+    border: 1px solid #CCCCCC;
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tr.surveysubheadrow
+{
+    background-color: #5893DC;
+    border-bottom: 1px solid #CCCCCC;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+tr.surveyrow
+{
+    background-color: #315581;
+    border-bottom: 1px solid #CCCCCC;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+tr.questionrow
+{
+    background-color: #E5E5E5;
+    border-bottom: 1px solid #CCCCCC;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: left;
+    color: #333333;
+}
+
+tr.optionrow:nth-child(odd)
+{
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #CCCCCC;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: left;
+    color: #333333;
+}
+
+tr.optionrow:nth-child(even)
+{
+    background-color: #F5F5F5;
+    border-bottom: 1px solid #CCCCCC;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: left;
+    color: #333333;
+}
+
+.surveyquestionlink
+{
+    font-size: 11px;
+    color: #FFFFFF;
+    font-weight: normal;
+    text-decoration: underline;
+    cursor: pointer;  
+}
+
+.surveyquestionoptionlink 
+{
+    font-size: 11px;
+    color: #333333;
+    font-weight: normal;
+    text-decoration: underline;    
+    cursor: pointer;  
+}
+
+/* ----- Player Heartbeat ------------------------------------- */
+
+table.playerheartbeattable
+{
+    border: 1px solid #CCCCCC;
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tr.playerheartbeatheaderrow
+{
+    background-color: #5893DC;
+    border-bottom: 1px solid #CCCCCC;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+tr.playerheartbeatrow
+{
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #CCCCCC;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: left;
+    color: #333333;
+}
+
+
+/* ----- GENERIC ------------------------------------- */
+ 
+.headertext
+{
+    font-weight: bold;
+    font-size: 14px;
+    color: #0000CC;
+}
+
+.footertext
+{
+    font-size: 11px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.paragraphheader
+{
+    font-weight: bold;
+    font-size: 14px;
+    color: #315581;
+}
+
+.paragraphtext
+{
+    font-size: 12px;
+    color: #333333;
+}
+
+.errortext
+{
+    font-size: 12px;
+    color: #DD0000;
+}
+
+.addimagetoslideshow
+{
+    cursor: pointer;
+    font-size: 10px;
+    color: #315581;
+    text-decoration: underline;
+}
+
+.modifyslideshowimagelist
+{
+    cursor: pointer;
+    font-size: 10px;
+    color: #315581;
+    text-decoration: underline;
+    margin-left: 4px;    
+}
+
+.addvideotoplaylist
+{
+    cursor: pointer;
+    font-size: 10px;
+    color: #315581;
+    text-decoration: underline;
+}
+
+.modifyplaylistvideolist
+{
+    cursor: pointer;
+    font-size: 10px;
+    color: #315581;
+    text-decoration: underline;
+    margin-left: 4px;    
+}
+
+.addcontenttoscreen
+{
+    cursor: pointer;
+    font-size: 10px;
+    color: #315581;
+    text-decoration: underline;
+}
+
+.modifyscreenscreencontentlist
+{
+    cursor: pointer;
+    font-size: 10px;
+    color: #315581;
+    text-decoration: underline;
+    margin-left: 4px;    
+}
+
+#sectionmain
+{
+    min-height: 550px;
+}
+
+.required
+{
+    color: #315581;
+}

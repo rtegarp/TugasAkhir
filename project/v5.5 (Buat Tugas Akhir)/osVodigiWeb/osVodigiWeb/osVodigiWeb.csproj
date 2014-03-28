@@ -1,0 +1,479 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DA95A36F-CD42-4D62-8D18-31A54E51134A}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>osVodigiWeb</RootNamespace>
+    <AssemblyName>osVodigiWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ApplicationErrorController.cs" />
+    <Compile Include="Controllers\ImageController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MusicController.cs" />
+    <Compile Include="Controllers\PageState\AccountPageState.cs" />
+    <Compile Include="Controllers\PageState\ImagePageState.cs" />
+    <Compile Include="Controllers\PageState\MusicPageState.cs" />
+    <Compile Include="Controllers\PageState\PlayerGroupPageState.cs" />
+    <Compile Include="Controllers\PageState\PlayerPageState.cs" />
+    <Compile Include="Controllers\PageState\PlayListPageState.cs" />
+    <Compile Include="Controllers\PageState\ReportActivityLogPageState.cs" />
+    <Compile Include="Controllers\PageState\ReportLoginLogPageState.cs" />
+    <Compile Include="Controllers\PageState\ReportPlayerScreenContentLogPageState.cs" />
+    <Compile Include="Controllers\PageState\ReportPlayerScreenLogPageState.cs" />
+    <Compile Include="Controllers\PageState\ReportSurveyResultsPageState.cs" />
+    <Compile Include="Controllers\PageState\ScreenContentPageState.cs" />
+    <Compile Include="Controllers\PageState\ScreenPageState.cs" />
+    <Compile Include="Controllers\PageState\SlideShowPageState.cs" />
+    <Compile Include="Controllers\PageState\SurveyPageState.cs" />
+    <Compile Include="Controllers\PageState\SystemMessagePageState.cs" />
+    <Compile Include="Controllers\PageState\UserPageState.cs" />
+    <Compile Include="Controllers\PageState\VideoPageState.cs" />
+    <Compile Include="Controllers\PlayerController.cs" />
+    <Compile Include="Controllers\PlayerGroupController.cs" />
+    <Compile Include="Controllers\PlayerGroupScheduleController.cs" />
+    <Compile Include="Controllers\PlayListController.cs" />
+    <Compile Include="Controllers\ReportController.cs" />
+    <Compile Include="Controllers\ScreenContentController.cs" />
+    <Compile Include="Controllers\ScreenController.cs" />
+    <Compile Include="Controllers\SlideShowController.cs" />
+    <Compile Include="Controllers\SurveyController.cs" />
+    <Compile Include="Controllers\SurveyQuestionController.cs" />
+    <Compile Include="Controllers\SurveyQuestionOptionController.cs" />
+    <Compile Include="Controllers\SystemMessageController.cs" />
+    <Compile Include="Controllers\UploadController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\VideoController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Constants.cs" />
+    <Compile Include="Helpers\Helpers.cs" />
+    <Compile Include="Helpers\Utility.cs" />
+    <Compile Include="Models\Classes\Account.cs" />
+    <Compile Include="Models\Classes\ActivityLog.cs" />
+    <Compile Include="Models\Classes\AnsweredSurvey.cs" />
+    <Compile Include="Models\Classes\AnsweredSurveyQuestionOption.cs" />
+    <Compile Include="Models\Classes\ApplicationError.cs" />
+    <Compile Include="Models\Classes\Image.cs" />
+    <Compile Include="Models\Classes\Login.cs" />
+    <Compile Include="Models\Classes\LoginLog.cs" />
+    <Compile Include="Models\Classes\Music.cs" />
+    <Compile Include="Models\Classes\Player.cs" />
+    <Compile Include="Models\Classes\PlayerGroup.cs" />
+    <Compile Include="Models\Classes\PlayerGroupSchedule.cs" />
+    <Compile Include="Models\Classes\PlayerScreenContentLog.cs" />
+    <Compile Include="Models\Classes\PlayerScreenLog.cs" />
+    <Compile Include="Models\Classes\PlayerView.cs" />
+    <Compile Include="Models\Classes\PlayList.cs" />
+    <Compile Include="Models\Classes\PlayListVideoXref.cs" />
+    <Compile Include="Models\Classes\Screen.cs" />
+    <Compile Include="Models\Classes\ScreenContent.cs" />
+    <Compile Include="Models\Classes\ScreenContentType.cs" />
+    <Compile Include="Models\Classes\ScreenContentView.cs" />
+    <Compile Include="Models\Classes\ScreenScreenContentXref.cs" />
+    <Compile Include="Models\Classes\ScreenView.cs" />
+    <Compile Include="Models\Classes\SlideShow.cs" />
+    <Compile Include="Models\Classes\SlideShowImageXref.cs" />
+    <Compile Include="Models\Classes\SlideShowMusicXref.cs" />
+    <Compile Include="Models\Classes\Survey.cs" />
+    <Compile Include="Models\Classes\SurveyQuestion.cs" />
+    <Compile Include="Models\Classes\SurveyQuestionOption.cs" />
+    <Compile Include="Models\Classes\SystemMessage.cs" />
+    <Compile Include="Models\Classes\Upload.cs" />
+    <Compile Include="Models\Classes\User.cs" />
+    <Compile Include="Models\Classes\UserAccount.cs" />
+    <Compile Include="Models\Classes\UserView.cs" />
+    <Compile Include="Models\Classes\Video.cs" />
+    <Compile Include="Models\Context\VodigiContext.cs" />
+    <Compile Include="Models\Context\VodigiLogsContext.cs" />
+    <Compile Include="Models\Interfaces\IAccountRepository.cs" />
+    <Compile Include="Models\Interfaces\IActivityLogRepository.cs" />
+    <Compile Include="Models\Interfaces\IAnsweredSurveyQuestionOptionRepository.cs" />
+    <Compile Include="Models\Interfaces\IAnsweredSurveyRepository.cs" />
+    <Compile Include="Models\Interfaces\IImageRepository.cs" />
+    <Compile Include="Models\Interfaces\ILoginLogRepository.cs" />
+    <Compile Include="Models\Interfaces\ILoginRepository.cs" />
+    <Compile Include="Models\Interfaces\IMusicRepository.cs" />
+    <Compile Include="Models\Interfaces\IPlayerGroupRepository.cs" />
+    <Compile Include="Models\Interfaces\IPlayerGroupScheduleRepository.cs" />
+    <Compile Include="Models\Interfaces\IPlayerRepository.cs" />
+    <Compile Include="Models\Interfaces\IPlayerScreenContentLogRepository.cs" />
+    <Compile Include="Models\Interfaces\IPlayerScreenLogRepository.cs" />
+    <Compile Include="Models\Interfaces\IPlayListRepository.cs" />
+    <Compile Include="Models\Interfaces\IPlayListVideoXrefRepository.cs" />
+    <Compile Include="Models\Interfaces\IReportRepository.cs" />
+    <Compile Include="Models\Interfaces\IScreenContentRepository.cs" />
+    <Compile Include="Models\Interfaces\IScreenContentTypeRepository.cs" />
+    <Compile Include="Models\Interfaces\IScreenRepository.cs" />
+    <Compile Include="Models\Interfaces\IScreenScreenContentXrefRepository.cs" />
+    <Compile Include="Models\Interfaces\ISlideShowImageXrefRepository.cs" />
+    <Compile Include="Models\Interfaces\ISlideShowMusicXrefRepository.cs" />
+    <Compile Include="Models\Interfaces\ISlideShowRepository.cs" />
+    <Compile Include="Models\Interfaces\ISurveyQuestionOptionRepository.cs" />
+    <Compile Include="Models\Interfaces\ISurveyQuestionRepository.cs" />
+    <Compile Include="Models\Interfaces\ISurveyRepository.cs" />
+    <Compile Include="Models\Interfaces\ISystemMessageRepository.cs" />
+    <Compile Include="Models\Interfaces\IUploadRepository.cs" />
+    <Compile Include="Models\Interfaces\IUserRepository.cs" />
+    <Compile Include="Models\Interfaces\IVideoRepository.cs" />
+    <Compile Include="Models\Repositories\EntityAccountRepository.cs" />
+    <Compile Include="Models\Repositories\EntityActivityLogRepository.cs" />
+    <Compile Include="Models\Repositories\EntityAnsweredSurveyQuestionOptionRepository.cs" />
+    <Compile Include="Models\Repositories\EntityAnsweredSurveyRepository.cs" />
+    <Compile Include="Models\Repositories\EntityImageRepository.cs" />
+    <Compile Include="Models\Repositories\EntityLoginLogRepository.cs" />
+    <Compile Include="Models\Repositories\EntityLoginRepository.cs" />
+    <Compile Include="Models\Repositories\EntityMusicRepository.cs" />
+    <Compile Include="Models\Repositories\EntityPlayerGroupRepository.cs" />
+    <Compile Include="Models\Repositories\EntityPlayerGroupScheduleRepository.cs" />
+    <Compile Include="Models\Repositories\EntityPlayerRepository.cs" />
+    <Compile Include="Models\Repositories\EntityPlayerScreenContentLogRepository.cs" />
+    <Compile Include="Models\Repositories\EntityPlayerScreenLogRepository.cs" />
+    <Compile Include="Models\Repositories\EntityPlayListRepository.cs" />
+    <Compile Include="Models\Repositories\EntityPlayListVideoXrefRepository.cs" />
+    <Compile Include="Models\Repositories\EntityReportRepository.cs" />
+    <Compile Include="Models\Repositories\EntityScreenContentRepository.cs" />
+    <Compile Include="Models\Repositories\EntityScreenContentTypeRepository.cs" />
+    <Compile Include="Models\Repositories\EntityScreenRepository.cs" />
+    <Compile Include="Models\Repositories\EntityScreenScreenContentXrefRepository.cs" />
+    <Compile Include="Models\Repositories\EntitySlideShowImageXrefRepository.cs" />
+    <Compile Include="Models\Repositories\EntitySlideShowMusicXrefRepository.cs" />
+    <Compile Include="Models\Repositories\EntitySlideShowRepository.cs" />
+    <Compile Include="Models\Repositories\EntitySurveyQuestionOptionRepository.cs" />
+    <Compile Include="Models\Repositories\EntitySurveyQuestionRepository.cs" />
+    <Compile Include="Models\Repositories\EntitySurveyRepository.cs" />
+    <Compile Include="Models\Repositories\EntitySystemMessageRepository.cs" />
+    <Compile Include="Models\Repositories\EntityUserRepository.cs" />
+    <Compile Include="Models\Repositories\EntityVideoRepository.cs" />
+    <Compile Include="Models\Repositories\IOUploadRepository.cs" />
+    <Compile Include="osVodigiService.asmx.cs">
+      <DependentUpon>osVodigiService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <None Include="Properties\PublishProfiles\PublishLocally.pubxml" />
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\menubar.png" />
+    <Content Include="Images\music.png" />
+    <Content Include="Images\no-image-available.jpg" />
+    <Content Include="Images\progress-bar.gif" />
+    <Content Include="Images\video-small.png" />
+    <Content Include="Images\vodigi-logo.png" />
+    <Content Include="Images\vodigi-tag.png" />
+    <Content Include="Media\DONOTDELETE.txt" />
+    <Content Include="osVodigiService.asmx" />
+    <Content Include="SampleImages\60255096-6a72-409e-b905-4d98ee717bb0.jpg" />
+    <Content Include="SampleImages\612bb76c-e16e-4fe8-87f2-bddc7eb59300.jpg" />
+    <Content Include="SampleImages\626c6a35-4523-46aa-9d0a-c2687b581e27.jpg" />
+    <Content Include="SampleImages\69f99c47-d1b0-4123-b62b-8f18bdc5702f.jpg" />
+    <Content Include="SampleImages\6f5e187f-52a2-4799-bdac-2e9199580b98.png" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="UploadedFiles\DONOTDELETE.txt" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LogOnPartial.cshtml" />
+    <Content Include="Views\Account\Create.cshtml" />
+    <Content Include="Views\Account\Edit.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\ApplicationError\Index.cshtml" />
+    <Content Include="Views\Image\Create.cshtml" />
+    <Content Include="Views\Image\Edit.cshtml" />
+    <Content Include="Views\Image\Index.cshtml" />
+    <Content Include="Views\Image\Upload.cshtml" />
+    <Content Include="Views\PlayerGroup\Create.cshtml" />
+    <Content Include="Views\PlayerGroup\Edit.cshtml" />
+    <Content Include="Views\PlayerGroup\Index.cshtml" />
+    <Content Include="Views\PlayerGroupSchedule\Edit.cshtml" />
+    <Content Include="Views\PlayList\Create.cshtml" />
+    <Content Include="Views\PlayList\Edit.cshtml" />
+    <Content Include="Views\PlayList\Index.cshtml" />
+    <Content Include="Views\Report\Index.cshtml" />
+    <Content Include="Views\Report\ReportActivityLog.cshtml" />
+    <Content Include="Views\Report\ReportLoginLog.cshtml" />
+    <Content Include="Views\Report\ReportPlayerHeartbeat.cshtml" />
+    <Content Include="Views\Report\ReportPlayerScreenContentLog.cshtml" />
+    <Content Include="Views\Report\ReportPlayerScreenLog.cshtml" />
+    <Content Include="Views\Report\ReportSurveyResults.cshtml" />
+    <Content Include="Views\Login\Validate.cshtml" />
+    <Content Include="Views\Screen\Create.cshtml" />
+    <Content Include="Views\Screen\Edit.cshtml" />
+    <Content Include="Views\Screen\Index.cshtml" />
+    <Content Include="Views\ScreenContent\Create.cshtml" />
+    <Content Include="Views\ScreenContent\Edit.cshtml" />
+    <Content Include="Views\ScreenContent\Index.cshtml" />
+    <Content Include="Views\SlideShow\Create.cshtml" />
+    <Content Include="Views\SlideShow\Edit.cshtml" />
+    <Content Include="Views\SlideShow\Index.cshtml" />
+    <Content Include="Views\Survey\Approve.cshtml" />
+    <Content Include="Views\Survey\Create.cshtml" />
+    <Content Include="Views\Survey\Edit.cshtml" />
+    <Content Include="Views\Survey\Index.cshtml" />
+    <Content Include="Views\Survey\View.cshtml" />
+    <Content Include="Views\SurveyQuestion\Create.cshtml" />
+    <Content Include="Views\SurveyQuestion\Edit.cshtml" />
+    <Content Include="Views\SurveyQuestionOption\Create.cshtml" />
+    <Content Include="Views\SurveyQuestionOption\Edit.cshtml" />
+    <Content Include="Views\Upload\Index.cshtml" />
+    <Content Include="Views\User\Create.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\UpdatePassword.cshtml" />
+    <Content Include="Views\Video\Create.cshtml" />
+    <Content Include="Views\Video\Edit.cshtml" />
+    <Content Include="Views\Video\Index.cshtml" />
+    <Content Include="Views\Video\Upload.cshtml" />
+    <Content Include="Views\Player\Create.cshtml" />
+    <Content Include="Views\Player\Edit.cshtml" />
+    <Content Include="Views\Player\Index.cshtml" />
+    <Content Include="Views\SystemMessage\Index.cshtml" />
+    <Content Include="Views\SystemMessage\Create.cshtml" />
+    <Content Include="Views\SystemMessage\Edit.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\ShortDateDisplay.cshtml" />
+    <Content Include="Views\Music\Create.cshtml" />
+    <Content Include="Views\Music\Edit.cshtml" />
+    <Content Include="Views\Music\Index.cshtml" />
+    <Content Include="Views\Music\Upload.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\Home\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59480</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:59181/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

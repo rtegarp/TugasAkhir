@@ -1,0 +1,32 @@
+﻿<Window x:Class="osVodigiUploader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:uc="clr-namespace:osVodigiUploader.UserControls"
+        Title="Vodigi Media Uploader" Height="375" Width="625" WindowStyle="ToolWindow" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/osVodigiUploader;component/film.ico">
+    <Grid>
+        <Rectangle Name="rectHeader" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,0" Fill="#FF315581" Width="625" Height="30"></Rectangle>
+        <TextBlock Name="lblWelcome" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25,7,0,0" FontFamily="Verdana" FontWeight="Bold" FontSize="12" Text="Vodigi Media Uploader" Foreground="#FFFFFFFF"></TextBlock>
+        <TextBlock Name="lblUsernameAccount" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100,7,0,0" FontFamily="Verdana" FontWeight="Normal" FontSize="12" Text="" Foreground="#FFFFFFFF"></TextBlock>
+        <TextBlock Name="lblTitle" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="35,45,0,0" FontFamily="Verdana" FontWeight="Bold" FontSize="12" Text="Select Media to Upload" Foreground="#FF333333"></TextBlock>
+        <TextBlock Name="lblDescription" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="35,63,0,0" FontFamily="Verdana" FontWeight="Normal" FontSize="12" Text="Select one or more video or image files to upload. Click 'Upload' when ready." Foreground="#FF333333"></TextBlock>
+
+        <Button Name="btnSelectFiles" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="326,87,0,0" Content="Browse" Width="80" Click="btnSelectFiles_Click"></Button>
+        <Button Name="btnUploadFiles" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="414,87,0,0" Content="Upload" Width="80" Click="btnUploadFiles_Click"></Button>
+        <Button Name="btnRemoveFiles" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="502,87,0,0" Content="Remove" Width="80" Click="btnRemoveFiles_Click"></Button>
+
+        <TextBlock Name="lblSelectedFiles" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="35,95,0,0" FontFamily="Verdana" FontWeight="Bold" FontSize="12" Text="Selected Files" Foreground="#FF333333"></TextBlock>
+        <DataGrid AutoGenerateColumns="False" Height="200" HorizontalAlignment="Left" Margin="20,114,0,0" Name="gridFiles" VerticalAlignment="Top" Width="563" IsReadOnly="True" CanUserReorderColumns="False" CanUserResizeRows="False" CanUserSortColumns="False" HorizontalScrollBarVisibility="Visible" SelectionMode="Extended">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="File Name" Binding="{Binding Path=FileName}"/>
+                <DataGridTextColumn Header="File Path" Binding="{Binding Path=FilePath}" Width="200"/>
+                <DataGridTextColumn Header="File Size" Binding="{Binding Path=FileSize}"/>
+                <DataGridTextColumn Header="File Type" Binding="{Binding Path=FileType}"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding Path=FileStatus}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <uc:ucLogin x:Name="ucLogin" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></uc:ucLogin>
+        <uc:ucUpload x:Name="ucUpload" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Visibility="Hidden"></uc:ucUpload>
+
+    </Grid>
+</Window>

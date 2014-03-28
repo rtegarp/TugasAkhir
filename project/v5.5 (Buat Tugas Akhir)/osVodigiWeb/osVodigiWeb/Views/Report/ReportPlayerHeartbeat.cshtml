@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "ReportPlayerHeartbeat";
+}
+
+<br /><br />
+<div class="textblock">
+    <span class="paragraphheader">Player Heartbeat Report</span><br />
+    <span class="paragraphtext">This report displays the last reported heartbeat from each player in this account.</span>
+</div>
+<br /><br />
+@Html.Raw((string)ViewData["PlayerHeartbeatTable"])
+<br /><br />
+

@@ -1,0 +1,125 @@
+﻿@model IEnumerable<osVodigiWeb.Models.UserView>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<script type="text/javascript" lang="javascript">
+    $(function () {
+        var pagenumber = $("#txtPageNumber").val();
+        var pagecount = $("#txtPageCount").val();
+        if (parseInt(pagenumber) == 1) {
+            $("#linkPrevious").hide();
+        }
+        if (parseInt(pagenumber) == parseInt(pagecount)) {
+            $("#linkNext").hide();
+        }
+    });
+    function NextPage() {
+        var pagenumber = $("#txtPageNumber").val();
+        var pagecount = $("#txtPageCount").val();
+        if (parseInt(pagenumber) < parseInt(pagecount)) {
+            $("#txtPageNumber").val(parseInt(pagenumber) + 1);
+            document.getElementById("formSearch").submit();
+        }
+    }
+    function PreviousPage() {
+        var pagenumber = $("#txtPageNumber").val();
+        if (parseInt(pagenumber) > 1) {
+            $("#txtPageNumber").val(parseInt(pagenumber) - 1);
+            document.getElementById("formSearch").submit();
+        }
+    }
+    function ResetPageCount() {
+        $("#txtPageNumber").val(1);
+    }
+</script>
+
+<br /><br />
+<div class="textblock">
+    <span class="paragraphheader">Users</span><span id="addlink">@Html.ActionLink("Add User", "Create")</span><br />
+    <span class="paragraphtext">The following is a list of users that match the search parameters below.</span>
+</div>
+<br /><br />
+@using (Html.BeginForm("Index", "User", FormMethod.Post, new { id = "formSearch" }))
+{    
+    <table class="searchtable">
+        <tr>
+            <td class="searchcell"><b>Account:</b><br />@Html.DropDownList("lstAccount", (SelectList)ViewData["AccountList"], new { @style = "font-size:10px;" })</td>
+            <td class="searchcell"><b>Username:&nbsp;</b><br />@Html.TextBox("txtUsername", (string)ViewData["Username"], new { @style = "width:150px;font-size:10px;" })</td>
+            <td class="searchcell"><b>Include Inactive:</b><br />@Html.CheckBox("chkIncludeInactive", (bool)ViewData["IncludeInactive"])</td>
+            <td class="searchcell"><b>Sort By:</b><br />@Html.DropDownList("lstSortBy", (SelectList)ViewData["SortByList"], new { @style = "font-size:10px;" })@Html.DropDownList("lstAscDesc", (SelectList)ViewData["AscDescList"], new { @style = "font-size:10px;" })</td>
+            <td class="searchcell" style="vertical-align:bottom;"><input type="submit" class="search" value="Search" onclick="ResetPageCount()" /></td>
+        </tr>
+    </table>    
+    <table style="border-spacing:0;border-collapse:collapse;" class="gridtable">
+        <tr>
+            <td class="gridheader">Account</td>
+            <td class="gridheader">Username</td>
+            <td class="gridheader">First Name</td>
+            <td class="gridheader">Last Name</td>
+            <td class="gridheader">Email Address</td>
+            <td class="gridheader">Admin</td>
+            <td class="gridheader">Active</td>
+            <td class="gridheader"></td>
+        </tr>
+
+    @if (Model.Count() > 0)
+    {
+        foreach (var item in Model)
+        {
+            <tr class="gridrow">
+                <td class="gridtext">
+                    @Html.DisplayFor(modelItem => item.AccountName)
+                </td>
+                <td class="gridtext">
+                    @Html.DisplayFor(modelItem => item.Username)
+                </td>
+                <td class="gridtext">
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td class="gridtext">
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td class="gridtext">
+                    @Html.DisplayFor(modelItem => item.EmailAddress)
+                </td>
+                <td class="gridtext">
+                    @Html.DisplayFor(modelItem => item.IsAdmin)
+                </td>
+                <td class="gridtext">
+                    @Html.DisplayFor(modelItem => item.IsActive)
+                </td>
+                <td class="gridtext">
+                    <span id="gridlink">@Html.ActionLink("Edit", "Edit", new { id = item.UserID })&nbsp;&nbsp;@Html.ActionLink("Change Password", "UpdatePassword", new { id = item.UserID })</span> 
+                </td>
+            </tr>
+        }
+    }
+    else
+    {
+        <tr>
+            <td class="gridtext" colspan="8" style="height:25px;vertical-align:middle;text-align:left;">No data available.</td>
+        </tr>
+    }
+        <tr>
+            <td class="gridfooter" colspan="8">
+                <div id="divfooter">
+                    <table style="border-spacing:0;border-collapse:collapse;" class="gridfootertable">
+                        <tr>
+                            <td style="text-align:left;"><span style="color:#FFFFFF;">Page @Html.Label((string)ViewData["PageNumber"]) of @Html.Label((string)ViewData["PageCount"]) (@Html.Label((string)ViewData["RecordCount"]) Total Items)</span></td>
+                            <td style="text-align:right;">
+                                <span id="linkPrevious" class="previousnext" onclick="PreviousPage();">Previous</span>&nbsp;&nbsp;
+                                <span id="linkNext" class="previousnext" onclick="NextPage();">Next</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>    
+    <br /><br />
+    @Html.Hidden("txtPageCount", ViewData["PageCount"])
+    @Html.Hidden("txtPageNumber", ViewData["PageNumber"])
+
+}

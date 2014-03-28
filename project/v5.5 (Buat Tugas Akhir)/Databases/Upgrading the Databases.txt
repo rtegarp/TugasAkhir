@@ -1,0 +1,30 @@
+
+Upgrading the Vodigi Databases
+
+The databases for Version 5.0 and Version 5.1 were identical.
+
+---------------------------------------------
+Version 5.0 or 5.1 to 5.2 Database Upgrade
+---------------------------------------------
+
+To update from Version 5.0 or Version 5.1 to Version 5.2, run the following script:
+
+- Vodigi 5.0 to 5.2 - Survey Tables and All Indexes.sql
+
+---------------------------------------------
+Version 5.0 or 5.1 to 5.5 Database Upgrade
+---------------------------------------------
+
+To update from Version 5.0 or Version 5.1 to Version 5.5, run the following script:
+
+- Vodigi 5.0 to 5.5 - Survey-Music-SystemMessage Scripts.sql
+
+---------------------------------------------
+Version 5.2 to 5.5 Database Upgrade
+---------------------------------------------
+
+To update from Version 5.2 to Version 5.5, run the following script:
+
+- Vodigi 5.2 to 5.5 - Music-SystemMessage Scripts.sql
+
+
